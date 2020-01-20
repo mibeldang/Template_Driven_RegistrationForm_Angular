@@ -1,0 +1,146 @@
+.thisbody{
+    background-color:palegoldenrod;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    font-family:fantasy
+      
+}
+.title{
+    color:teal;
+    text-align: center;
+    font-size:30px
+}
+label{
+    font-size:15px
+}
+button{
+    padding: 5px 8px;
+    font-size:15px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    color:#555;
+    border: 2px solid #555;
+    font-family:fantasy
+
+}
+.submit{
+  color:teal
+}
+
+button:hover {
+  background-color:#ddd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 40%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 30px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  padding: 5px;
+  text-align: center;
+  background-color: #f1f1f1;
+  border-radius: 15px;
+
+}
+input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color:gainsboro;
+    color:black;
+    border-radius: 4px;
+    font-family: fantasy;
+    font-size:15px
+
+}
+.header {
+  padding: 20px 25px;
+  background: #555;
+  color: #f1f1f1;
+  text-align:center;
+  border-radius: 15px
+
+
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:#555;
+  color: white;
+  text-align: center;
+  padding: 30px 35px;
+
+}
+
+.lists {
+  font-family: fantasy;
+  border-collapse: collapse;
+  width: 100%;
+  border-radius:15px;
+
+}
+
+.lists td{
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size:15px
+}
+.lists th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size:18px
+}
+
+.lists tr:nth-child(even){background-color: #f2f2f2;}
+
+.lists tr:hover {background-color: #ddd;}
+
+.lists th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color:peru;
+  color:#555;
+  font-size:15px
+
+}
+h2{
+  font-family: fantasy;
+  font-size:30px
+}
