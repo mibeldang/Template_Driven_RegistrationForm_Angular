@@ -1,0 +1,42 @@
+.top-container {
+    background-color: peru;
+    padding: 40px;
+    text-align: center;
+  }
+  h1{
+    font-family: fantasy;
+    font-size:50px
+  }
+  
+  .button{
+    font-size:20px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    color:black;
+    background-color:teal;
+    border: 3px solid #555;
+    font-family:fantasy;
+    margin-bottom:5px;
+    margin-left:90%;
+
+
+}
+
+button:hover {
+  background-color:peru;
+}
+.h1{
+  text-align:center
+}
+h1{
+  text-align:center
+
+}
+.view{
+  font-family:fantasy;
+  font-size:70px
+}
+
+

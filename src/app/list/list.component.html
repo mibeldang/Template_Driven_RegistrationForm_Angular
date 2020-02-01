@@ -7,25 +7,30 @@
     <br>
     <table class="lists">
         <tr>
-            <th>No</th>
+            <th>Id</th>
             <th>First Name</th>
-            <th>Last Name</th>
+            <th>Username</th>
             <th>Email</th>
-            <th>Password</th>
+            <th>Phone</th>
+            <th>Website</th>
+            <!-- <th>Password</th> -->
             <!-- <th>Student</th> -->
-            <th>Gender</th>
+            <!-- <th>Gender</th> -->
             <th>Action</th>
         </tr>
-        <tr *ngFor="let one of member; let no=index">
-            <td>{{no+1}}</td>
+        <tr *ngFor="let one of info;let id=index">
+            <td>{{one.id}}</td>
             <td>{{one.name}}</td>
-            <td>{{one.lname}}</td>
+            <td>{{one.username}}</td>
             <td>{{one.email}}</td>
-            <td>{{one.pass}}</td>
+            <td>{{one.phone}}</td>
+            <td>{{one.website}}</td>
             <!-- <td>{{one.enroll}}</td> -->
-            <td>{{one.gender}}</td>
+            <!-- <td>{{one.gender}}</td> -->
             <td>
-                <button (click)="edit(one)">Edit</button>
+                <button  routerLink="/view/{{one.id}}">View</button>
+                <button (click)="edit(one)">Update</button>
+                <button (click)="delete(id)">Delete</button>
             </td>
         </tr>
 

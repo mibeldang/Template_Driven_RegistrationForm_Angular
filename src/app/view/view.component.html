@@ -1,0 +1,33 @@
+<div class="top-container">
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <br>
+                <h2>Flip to see details</h2><br>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQC7tfgZRJCRmN0CVzgJmjuJMvfOyT_6Mq95K0klkSnGy26kcE9"
+                    width="400px" height="450px">
+            </div>
+            <br>
+            <div class="flip-card-back" *ngFor="let one of data">
+                <br><br>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQC7tfgZRJCRmN0CVzgJmjuJMvfOyT_6Mq95K0klkSnGy26kcE9"
+                    width="auto" height="auto">
+                <br><br>
+                <h1>Name: {{one.name}}</h1>
+                <h2>Id: {{one.id}} </h2>
+                <label>Username:{{one.username}}</label><br>
+                <label>Email: {{one.email}}</label><br>
+                <label>Phone: {{one.phone}}</label><br>
+                <label>Website: {{one.website}}</label><br>
+                <br>
+                <div>
+                    <button routerLink="/dashboard" type="button" class="btn btn-info">Back To registration Form</button>
+                <br><br>
+                </div>
+                <br>
+
+            </div>
+        </div>
+    </div>
+
+</div>

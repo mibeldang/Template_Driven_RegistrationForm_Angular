@@ -1,78 +1,83 @@
+<div class="top-container">
+    <h1>EVENT REGISTRATION</h1>
+</div>
 <div class='body'>
     <br><br>
+    <div class="back"> <button routerLink="/home">Home</button>
+        <br>
+    </div>
     <div class="card" *ngIf="register">
         <div class="header">
             <h2>Registration Form</h2>
         </div>
+
         <br>
         <form (ngSubmit)="onSubmit(sampleform)" #sampleform="ngForm">
-                <div>
-                    <label>First Name:</label>
-                    <input ngModel name="name" [(ngModel)]="info.name" required minlength="3" #name="ngModel">
-                    <div *ngIf="name.invalid && (name.dirty || name.touched )" class="alert alert-danger">
-                        <div *ngIf="name.errors.required"><p>Name is required</p></div>
-                        <div *ngIf="name.errors.minlength"><p>Name must at least 3 characters long</p></div>
+            <div>
+                <div *ngIf="showid">
+                    <label>Id</label>
+                    <input required name="id" [n(ngModel)="newid">
+                </div>
+                <label> Name:</label>
+                <input ngModel name="name" [(ngModel)]="newname" required minlength="3" #name="ngModel">
+                <div *ngIf="name.invalid && (name.dirty || name.touched )" class="alert alert-danger">
+                    <div *ngIf="name.errors.required">
+                        <p>Name is required</p>
+                    </div>
+                    <div *ngIf="name.errors.minlength">
+                        <p>Name must at least 3 characters long</p>
                     </div>
                 </div>
-                <br>
-                <div>
-                    <label>Last Name:</label>
-                    <input ngModel name="lname" [(ngModel)]="info.lname" required minlength="2" #lname="ngModel">
-                    <div *ngIf="lname.invalid && (lname.dirty || lname.touched )" class="alert alert-danger">
-                        <div *ngIf="lname.errors.required">Last Name is required</div>
-                        <div *ngIf="lname.errors.minlength">Last Name must at least 2 characters long</div>
-                    </div>
+            </div>
+            <br>
+            <div>
+                <label>Username:</label>
+                <input ngModel name="username" [(ngModel)]="newusername" required minlength="2" #username="ngModel">
+                <div *ngIf="username.invalid && (username.dirty || username.touched )" class="alert alert-danger">
+                    <div *ngIf="username.errors.required">Username is required</div>
+                    <div *ngIf="username.errors.minlength">Username must at least 2 characters long</div>
                 </div>
-                <br>
-                <div>
-                    <label>Email: </label>
-                    <input ngModel type="email" name="email" [(ngModel)]="info.email" required #emailadd="ngModel"
-                        [email]="true">
-                    <div *ngIf="emailadd.invalid && (emailadd.dirty || emailadd.touched )" class="alert alert-danger">
-                        <div *ngIf="emailadd.errors.required">Email is required</div>
-                        <div *ngIf="emailadd.errors.email">Email is invalid </div>
-                    </div>
+            </div>
+            <br>
+            <div>
+                <label>Email: </label>
+                <input ngModel type="email" name="email" [(ngModel)]="newemail" required #emailadd="ngModel" [email]="true">
+                <div *ngIf="emailadd.invalid && (emailadd.dirty || emailadd.touched )" class="alert alert-danger">
+                    <div *ngIf="emailadd.errors.required">Email is required</div>
+                    <div *ngIf="emailadd.errors.email">Email is invalid </div>
                 </div>
-                <br>
-                <div>
-                    <label>Password: </label>
-                    <input ngModel type="password" name="pass" [(ngModel)]="info.pass" required minlength="6" #password="ngModel">
-                    <div *ngIf="password.invalid && (password.dirty || password.touched )" class="alert alert-danger">
-                        <div *ngIf="password.errors.required">Password is required</div>
-                        <div *ngIf="password.errors.minlength">Password must be atleast 6 characters</div>
-                    </div>
+            </div>
+            <br> 
+            <div>
+                <label>Phone: </label>
+                <input ngModel  name="phone" [(ngModel)]="newphone" required #phone="ngModel">
+                <div *ngIf="phone.invalid && (phone.dirty || phone.touched )" class="alert alert-danger">
+                    <div *ngIf="phone.errors.required">Phone is required</div>
                 </div>
-                <br>
-                <!-- <div>
-                    <label>Student?
-                        <input ngModel type="checkbox" name="enroll" [(ngModel)]="info.enroll" required #isStudent="ngModel">
-                    </label>
-                </div> -->
-                <br>
-                <div>
-                    <label>Gender :<br>
-                        <select ngModel name="gender" [(ngModel)]="info.gender" required #gender="ngModel">
-                            <option value="Male">Male </option>
-                            <option value="Female">Female</option>
-                            <option value="Other">Other</option>
-                        </select>
-                    </label>
+            </div>
+            <br>
+            <div>
+                <label>Website: </label>
+                <input ngModel name="website" [(ngModel)]="newsite" required #website="ngModel">
+                <div *ngIf="website.invalid && (website.dirty || website.touched )" class="alert alert-danger">
+                    <div *ngIf="website.errors.required">Website is required</div>
+                    <div *ngIf="website.errors.minlength">Website is invalid </div>
                 </div>
-                <br><br>
-                <div>
-                    <button class="but" [disabled]=" !sampleform.form.valid">Submit</button>
-                </div>
-                <br>
-                <br>
-                <!-- <div>
-                        <h2 *ngIf="notif">Notifications <br> {{notif}}</h2>
-                    </div> -->
-                <br>
+            </div>
+            <br>
+            <br>
+            <div>
+                <button class="but" [disabled]=" !sampleform.form.valid">Submit</button>
+            </div>
+            <br>
+            <br>
+            <br>
         </form>
+        <!-- <button routerLink='/registeredList' routerLinkActive="router-link-active">Show Registered List</button> -->
     </div>
 
     <div class="col2">
-        <app-list  (editData)="edit($event)" [member]="list"></app-list>
+        <app-list (editDataEvent)="edit($event)" [info]="model"></app-list>
     </div>
 
 

@@ -137,4 +137,18 @@ div.ng-invalid.ng-dirty{
    font-size:15px
    
 }
+.top-container {
+  background-color: peru;
+  padding: 40px;
+  text-align: center;
+}
+h1{
+  font-family: fantasy;
+  font-size:50px
+}
+.back{
+  margin-left:92%
+}
+
+
 

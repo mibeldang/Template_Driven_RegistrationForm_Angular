@@ -1,8 +1,8 @@
 export class Format {
+    id:number;
     name: String;
-    lname: String;
+    username: String;
     email: String;
-    pass: String;
-    gender: String;
-    enroll: String
+    phone:string;
+    website:string;
 }
